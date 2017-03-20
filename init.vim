@@ -10,7 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
-Plug 'flazz/vim-colorschemes'
+Plug 'lifepillar/vim-solarized8'
 Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
@@ -36,6 +36,7 @@ set breakindent
 " Automatically reload changes on disk
 set autoread
 
+set termguicolors
 "set rnu
 set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h10
 syntax enable
@@ -46,7 +47,7 @@ if &diff
 endif
 
 set background=dark
-colorscheme solarized
+colorscheme solarized8_dark
 
 "Search for visually selected text
 vnoremap <c-f> y<ESC>/<c-r>"<CR>
@@ -81,3 +82,6 @@ let g:airline_theme='solarized'
 "For faster gitgutter updates
 set updatetime=750
 
+
+"Disable typescript-vim indentation
+let g:typescript_indent_disable = 1
