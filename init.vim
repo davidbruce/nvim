@@ -2,6 +2,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
 Plug 'jcd1230/nginx-vim-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'chrisbra/vim-diff-enhanced'
