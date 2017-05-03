@@ -12,6 +12,15 @@ Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
 Plug 'lifepillar/vim-solarized8'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'https://github.com/w0rp/ale.git'
+Plug 'https://github.com/Quramy/tsuquyomi.git'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'https://github.com/Quramy/vim-js-pretty-template.git'
+Plug 'https://github.com/mattn/emmet-vim.git'
+Plug 'https://github.com/jason0x43/vim-js-indent.git'
+Plug 'https://github.com/Shougo/unite.vim.git'
+Plug 'https://github.com/airblade/vim-rooter.git'
+"Plug 'https://github.com/artur-shaik/vim-javacomplete2.git'
 call plug#end()
 
 set ff=unix
@@ -40,6 +49,9 @@ set termguicolors
 "set rnu
 set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h10
 syntax enable
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " started In Diff-Mode set diffexpr (plugin not loaded yet)
 if &diff
@@ -70,6 +82,7 @@ function StripWS()
 endfun
 
 autocmd BufWrite *.js,*.asp,*.css,*.html,*.htm :call StripWS()
+autocmd Filetype javascript,typescript setlocal ts=2 sw=2 expandtab
 
 "SQL Server Highlighting
 let g:sql_type_default = "sqlserver"
@@ -85,3 +98,4 @@ set updatetime=750
 
 "Disable typescript-vim indentation
 let g:typescript_indent_disable = 1
+
